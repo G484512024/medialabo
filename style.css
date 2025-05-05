@@ -53,11 +53,11 @@ p.ue{
     margin-top: 0;
 }
 h3#kadai{
-    margin-bottom: 0.3ren;
+    margin-bottom: 0.3rem;
     margin-top: 2px;
     position: relative;
   display: inline-block;
-  padding: 0rem 2rem 0rem 4rem;
+  padding: 1rem 2rem 1rem 4rem;
   color: #fff;
   border-radius: 100vh 0 0 100vh;
   background: #fa4141;
@@ -90,6 +90,8 @@ h3.kazu {position: relative;
   }
   h3.co{
     color :#fa4141;
+    font-size: 30px;
+    font-family: system-ui;
   }
   a:link {
     color:red;
@@ -99,6 +101,46 @@ a:visited{
 }
 a:hover{
     color:gold;
+} 
+
+
+
+.gakusyu{
+  margin:1em 0;
+  position: relative;
+  padding: 0em 0em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
 }
-  
-    
+
+.gakusyu:after {right: 10px;}
+
+.gakusyu:before, 
+.gakusyu:after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
+}
+
+.gakusyu:before {left: 5px;}
+.gakusyu:after {right: 10px;}
+.gakusyu h4{
+  margin: 0.5em;;
+  padding-left: 20px;
+
+}
+
+.bun p{
+  margin:0em;
+  padding-left: 20px;
+  font-family: serif;
+  background-color: bisque;
+}
+.ensyu{
+  font-size: 20px;
+  color: #fa4141;
+}
