@@ -22,7 +22,7 @@ div#komidashi{
     }
     div#komidashi> div{
     margin: 0; 
-    padding: 5;
+    padding: 5px;
     border-radius:5px;
     }
 
@@ -74,19 +74,22 @@ h3#kadai::before {
   background: #fff;
 
 }
-h3.kazu {position: relative;
-    padding: 0rem 0rem calc(2rem + 20px);
+
+
+h3.kazu{position: relative;
+    padding: 0.7rem 1.2rem;
     background: #fff100;
+    font-size: 1.2rem;
   }
   
   h3.kazu::before {
     position: absolute;
-    top: -7px;
-    left: -7px;
+    top: -4px;
+    left: -4px;
     width: 100%;
     height: 100%;
     content: '';
-    border: 4px solid #000;
+    border: 2px solid #000;
   }
   h3.co{
     color :#fa4141;
