@@ -1,19 +1,6 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
-let buttonx=document.querySelector('#print');
-buttonx.addEventListener('click',search);
-function search(){
-  let input=document.querySelector('#koumoku').value;
-  let parts=document.querySelectorAll('#genre-list li');
-  
-  console.log("検索キー："+input);
 
-  
-  }
-
-
-  
-    
 
 
 
@@ -29,7 +16,6 @@ function print(data) {
   console.log(data.results.shop[0].coupon_urls.pc);
   console.log(data.results.shop[0].coupon_urls.sp);
 
-
   console.log(data.results.shop[1].name);
   console.log(data.results.shop[1].access);
   console.log(data.results.shop[1].address);
@@ -39,15 +25,70 @@ function print(data) {
   console.log(data.results.shop[1].free_drink);
   console.log(data.results.shop[1].coupon_urls.pc);
   console.log(data.results.shop[1].coupon_urls.sp);
-
-
 }
+
+
+
+
+
+
+  
+    
+
+
+
+
 
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let result = document.querySelector('#result');
+  result.innerHTML = '';
+  result.setAttribute('style', 'display: flex; gap: 20px; flex-wrap: wrap;'); 
+  let shops = data.results.shop;
 
+  for (let i = 0; i < 2; i++) {
+    let shop = shops[i];
+
+    let div = document.createElement('div');
+    div.setAttribute('class', 'kekka'); 
+
+    let h3 = document.createElement('h3');
+    h3.textContent = shop.name;
+    div.insertAdjacentElement('beforeend', h3);
+
+    let ul = document.createElement('ul');
+
+    let items = [
+      { label: 'アクセス', value: shop.access },
+      { label: '住所', value: shop.address },
+      { label: '予算', value: shop.budget.name },
+      { label: 'キャッチコピー', value: shop.catch },
+      { label: 'ジャンル', value: shop.genre.name }
+    ];
+
+    for (let item of items) {
+      let li = document.createElement('li');
+
+      let strong = document.createElement('strong');
+      strong.textContent = item.label + ':';
+
+      li.insertAdjacentElement('beforeend', strong);
+      li.insertAdjacentText('beforeend', ' ' + item.value);
+
+      ul.insertAdjacentElement('beforeend', li);
+    }
+
+    div.insertAdjacentElement('beforeend', ul);
+    result.insertAdjacentElement('beforeend', div);
+  }
 }
+
+
+   
+
+
+
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
