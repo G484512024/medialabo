@@ -43,6 +43,7 @@ function print(data) {
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
   let result = document.querySelector('#result');
+  result.innerHTML = '';
   result.setAttribute('style', 'display: flex; gap: 20px; flex-wrap: wrap;'); 
   let shops = data.results.shop;
 
