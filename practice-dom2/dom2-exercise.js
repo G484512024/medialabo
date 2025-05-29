@@ -14,5 +14,18 @@ let gakka = [
 	{name: "デザイン学科", ename: "Department of Design"}
 ];
 
+
 //////////////// ここから下にプログラムを書きたそう!
 
+p=document.createElement('p');
+p.textContent=campus.address;
+let h=document.querySelector('h2#addr');
+h.insertAdjacentElement('afterend',p);
+for ( m of gakka) {
+	let u=document.createElement('ul');
+	let l=document.createElement('li');
+	h=document.querySelector('h2#dept');
+	h.insertAdjacentElement('afterend',u);
+	l.textContent=m.name;
+	u.insertAdjacentElement('beforeend',l);
+  }
