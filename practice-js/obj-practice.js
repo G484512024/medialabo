@@ -26,10 +26,7 @@ for(let n of campus.buildingD){
   
 }
 
-for(let m of gakka){
-    console.log(m.ename);
-  
-}
+
 
 
 
