@@ -4,43 +4,20 @@
     <link rel="stylesheet" href="project.css">
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="gourmet.js" defer></script>
   </head>
   <body>
     
    
       <h2>グルメの情報</h2>
-      
-      
-       <div class="grid">
-        <div class="kekka">
-          <h3>バグダッドカフェ Bagdadcafe / モータウン MOTOWN</h3>
-          <ul>
-            <li><strong>アクセス:</strong> 京王八王子駅を背にし右手に見えるローソンの隣のビル、ホテルザ・ビーの2階です。</li>
-            <li><strong>住所:</strong> 東京都八王子市明神町4-6-12 ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F</li>
-            <li><strong>予算:</strong> 3001～4000円</li>
-            <li><strong>キャッチコピー:</strong> 【サプライズ演出有】 結婚パーティー受付中</li>
-            <li><strong>ジャンル:</strong> 居酒屋</li>
-          </ul>
-        </div>
+      <input type="search" id="skey"><button id="sendRequest">検索</button>
+      <div id="result"></div>
 
       
-        <div class="kekka">
-          <h3>隠れ家バル Funny&Bouquet</h3>
-          <ul>
-            <li><strong>アクセス:</strong> ＪＲ八王子駅北口徒歩１分 / 京王八王子駅徒歩3分</li>
-            <li><strong>住所:</strong> 東京都八王子市東町12-14</li>
-            <li><strong>予算:</strong> 2001～3000円</li>
-            <li><strong>キャッチコピー:</strong> 2.5時間飲み放題付2000円~ 【★少人数様ソファー★】</li>
-            <li><strong>ジャンル：</strong> 居酒屋</li>
-          </ul>
-        </div>
-        
-        
-         
-      </div>
-      <input type="search"><button>検索</button>
-      <div id="result"></div>
+      
+       
+      
 
       
         
